@@ -9,6 +9,7 @@ html{
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
+    overflow-x: hidden;
 }
 
 .header{
