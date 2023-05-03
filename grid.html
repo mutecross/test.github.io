@@ -9,10 +9,7 @@
   <body class="page-block">
     <header class="header">
       <h1>Вариант с Grid</h1>
-      <nav>
-        <p><a href="index.html">Вариант с JS</a></p>
-        <p><a href="flex.html">Вариант с Flex</a></p>
-      </nav>
+      <nav class="navigation"></nav>
     </header>
     <main class="main">
       <div class="map">
@@ -24,5 +21,12 @@
     <footer class="footer">
       <h2>Подвал</h2>
     </footer>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/extensions.js"></script>
+    <script>
+      $(document).ready(function () {
+        NavigationBlock();
+      });
+    </script>
   </body>
 </html>
