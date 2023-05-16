@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0" name="viewport" />
-    <title>Header с Sticky</title>
+    <title>Table</title>
     <link rel="stylesheet" href="css/style_fixed.css" />
+    <link rel="stylesheet" href="css/table.css" />
   </head>
 
   <body class="page-block">
     <header class="header fixed">
-      <h1 class="header__text">Header с Fixed</h1>
+      <h1 class="header__text">Table</h1>
       <nav class="navigation"></nav>
     </header>
     <main class="main">
@@ -17,20 +18,22 @@
         <button>Кнопка 1</button>
         <button>Кнопка 2</button>
       </div>
-      <article class="article"></article>
+      <div class="table-wrapper"></div>
     </main>
     <footer class="footer">
       <h2>Подвал</h2>
     </footer>
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/extensions.js"></script>
-    <script src="js/content.js"></script>
     <script src="js/fixed.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/russian.js"></script>
     <script>
       $(document).ready(function () {
         NavigationBlock();
-        ContentText();
         HeaderFixed();
+        HeaderTableSticky();
+        TableBlock(20, 100);
       });
     </script>
   </body>
