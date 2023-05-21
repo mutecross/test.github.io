@@ -1,65 +1,76 @@
 function HeightAllFixed() {
-    let height_all = 0;
-    $('.fixed').each(function () {
-      height_all += $(this).outerHeight();
-    })
-    return height_all;
-  }
+  let height_all = 0;
+  $('.fixed-top').each(function () {
+    height_all += $(this).outerHeight();
+  })
+  return height_all;
+}
 
-  function HeightFixedArray() {
-    let height_array = [];
-    let $i = 0;
-    $('.fixed').each(function () {
-      height_array[$i] = $(this).outerHeight();
-      $i++;
-    })
-    return height_array;
-  }
+function HeightFixedArray() {
+  let height_array = [];
+  let $i = 0;
+  $('.fixed-top').each(function () {
+    height_array[$i] = $(this).outerHeight();
+    $i++;
+  })
+  return height_array;
+}
 
-  function HeaderFixed(){
+function HeaderFixed() {
+
+  $(window).scroll(function () {
     let height_all = HeightAllFixed();
     let height_array = HeightFixedArray();
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1 || $(this).scrollLeft() > 1) {
-          $i = 0;
-          $("body").css({
-            paddingTop: height_all + "px",
+    if ($(this).scrollTop() > 1 || $(this).scrollLeft() > 1) {
+      $('.fixed-top').addClass("header--fixed");
+
+      $(".page-block").css({
+        paddingTop: height_all + "px", 
+      });
+      let $i = 0;
+      $('.fixed-top').each(function () {
+        if ($i) {
+          $(this).css({
+            top: height_array[$i - 1] + "px",
           });
-          $('.fixed')
-            .addClass('header-fixed')
-            .each(function () {
-              if ($i) {
-                $(this).css({
-                  top: height_array[$i - 1] + "px",
-                });
-              }
-              $i++
-            });
-        } else {
-          $("body").css({
-            paddingTop: 0,
+        }
+        $i++
+      });
+
+    } else {
+      $('.fixed-top').removeClass("header--fixed");
+      $(".page-block").css({
+        paddingTop: 0, 
+      });
+
+      $('.fixed-top').each(function () {
+          $(this).css({
             top: 0,
           });
-          $('.fixed')
-            .removeClass('header-fixed')
-            .css({
-              top: 0,
-            });
-        }
       });
-  }
+    }
+  });
+}
 
-  function HeaderTableSticky(){
+function HeaderTableSticky() {
+  if($('.sticky-block').length){
     let height_all = HeightAllFixed();
-
-    $(window).scroll(function () {
-      $('.sticky-block').each(function(){
-        $(this).css({
-          top: height_all,
-        });
+    $('.sticky-block').each(function () {
+      $(this).css({
+        top: height_all,
       });
     });
-
   }
+}
 
-  
+function FooterFixed() {
+  if($('.footer--fixed').length){
+    let footer_height = $('.footer--fixed').outerHeight();
+    $(".main").css({
+      paddingBottom: footer_height + "px",
+    });
+  }
+ 
+}
+
+

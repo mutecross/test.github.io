@@ -3,7 +3,7 @@ function TableBlock(columns, rows) {
   let OUTPUT;
   OUTPUT = '<table class="table">';
   OUTPUT += '<thead>';
-  OUTPUT += '<tr>';
+  OUTPUT += '<tr class="table__row">';
   for (let i = 0; i < columns; i++) {
     OUTPUT += '<th class="table-head__cell sticky-block">';
     OUTPUT += RandRussian();
@@ -13,7 +13,7 @@ function TableBlock(columns, rows) {
   OUTPUT += '</thead>';
   OUTPUT += '<tbody>';
   for (let i = 0; i < rows; i++) {
-    OUTPUT += '<tr>';
+    OUTPUT += '<tr class="table__row">';
     for (let j = 0; j < columns; j++) {
       OUTPUT += '<td class="table-body__cell">';
       OUTPUT += RandRussian();

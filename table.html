@@ -2,26 +2,29 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
     <title>Table</title>
     <link rel="stylesheet" href="css/style_fixed.css" />
     <link rel="stylesheet" href="css/table.css" />
   </head>
 
   <body class="page-block">
-    <header class="header fixed">
+    <header class="header fixed-top">
       <h1 class="header__text">Table</h1>
       <nav class="navigation"></nav>
     </header>
     <main class="main">
-      <div class="area-button fixed">
+      <div class="area-button fixed-top">
         <button>Кнопка 1</button>
         <button>Кнопка 2</button>
       </div>
       <div class="table-wrapper"></div>
     </main>
-    <footer class="footer">
-      <h2>Подвал</h2>
+    <footer class="footer footer--fixed">
+      <h2>Подвал. Очень большой текст. Полезная информация</h2>
     </footer>
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/extensions.js"></script>
@@ -31,9 +34,15 @@
     <script>
       $(document).ready(function () {
         NavigationBlock();
+        TableBlock(15, 100);
         HeaderFixed();
         HeaderTableSticky();
-        TableBlock(20, 100);
+        FooterFixed();
+        $(window).resize(function () {
+          HeaderFixed();
+          HeaderTableSticky();
+          FooterFixed();
+        });
       });
     </script>
   </body>

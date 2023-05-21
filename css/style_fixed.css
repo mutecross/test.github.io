@@ -1,86 +1,87 @@
 html {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .page-block {
-    height: 100%;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    
-  }
-  
-  .header {
-    border: 1px solid #000000;
-    flex: 0 0 auto;
-    background: #7facff;
-  }
+  height: 100%;
+  width: 100%;
+}
 
-  .fixed{
-    width: 100%;
-    box-sizing: border-box;
-    z-index:99;
-  }
+.page-block {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
 
-  .header-fixed{
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
+.header {
+  border: 1px solid #000000;
+  flex: 0 0 auto;
+  background: #7facff;
+}
 
-  
+.header--fixed {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
 
- 
-  .navigation__menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .menu__item {
-    margin: 2px 4px;
-    padding: 2px 4px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #000000;
-  }
-  
-  .main {
-    border: 1px solid #000000;
-    flex: 1 0 auto;
-  }
+.navigation__menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .area-button{
-    border: 1px solid #000000;
-    padding: 5px;
-    background: #7fffbf;
-  }
-   
-  .article {
-    padding: 5px;
-    margin: 5px auto;
-    max-width: 1000px;
-  }
-  
-  .text {
-    text-indent: 1.5em;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.2;
-    text-align: justify;
-    hyphens: auto;
-    color: #000000;
-  }
-  
-  .footer {
-    border: 1px solid #000000;
-    background: #7facff;
-    flex: 0 0 auto;
-    
-  }
-  
+.menu__item {
+  margin: 2px 4px;
+  padding: 2px 4px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.main {
+  border: 1px solid #000000;
+  flex: 1 0 auto;
+}
+
+.area-button {
+  border: 1px solid #000000;
+  padding: 5px;
+  background: #7fffbf;
+}
+
+.article {
+  padding: 5px;
+  margin: 5px auto;
+  max-width: 1000px;
+}
+
+.text {
+  text-indent: 1.5em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: justify;
+  hyphens: auto;
+  color: #000000;
+}
+
+.footer {
+  border: 1px solid #000000;
+  background: #7facff;
+  flex: 0 0 auto;
+}
+
+.footer--fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 90;
+}

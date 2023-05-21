@@ -2,18 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0" name="viewport" />
-    <title>Header с Sticky</title>
+    <meta
+      content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <title>Header с Fixed</title>
     <link rel="stylesheet" href="css/style_fixed.css" />
   </head>
 
   <body class="page-block">
-    <header class="header fixed">
+    <header class="header fixed-top">
       <h1 class="header__text">Header с Fixed</h1>
       <nav class="navigation"></nav>
     </header>
     <main class="main">
-      <div class="area-button fixed">
+      <div class="area-button fixed-top">
         <button>Кнопка 1</button>
         <button>Кнопка 2</button>
       </div>
@@ -29,8 +32,9 @@
     <script>
       $(document).ready(function () {
         NavigationBlock();
-        ContentText();
+        GetContent(13);
         HeaderFixed();
+        FooterFixed();
       });
     </script>
   </body>
